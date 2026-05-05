@@ -5,11 +5,27 @@ import '../styles/global.css';
 <html lang="en">
     <head>
         <meta charset="UTF-8" />
-        <meta name="viewport" content="width=device-width" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+        <!-- Title & description -->
+        <title>AdriTech – Électricien Bruxelles</title>
+        <meta name="description" content="AdriTech – Électricien indépendant à Bruxelles. Installations, rénovations, dépannages, mises en conformité, domotique. Devis gratuit." />
+
+        <!-- Favicons -->
         <link rel="icon" type="image/png" href="/images/favicon.png" />
         <link rel="apple-touch-icon" href="/images/apple-touch-icon.png" />
+
+        <!-- Open Graph / social sharing -->
+        <meta property="og:title" content="AdriTech – Électricien Bruxelles" />
+        <meta property="og:description" content="Installations, rénovations, dépannages, mises en conformité, domotique. Devis gratuit." />
+        <meta property="og:image" content="https://adritech.be/images/og-image.jpg" />
+        <meta property="og:url" content="https://adritech.be" />
+        <meta property="og:type" content="website" />
+
+        <!-- Twitter -->
+        <meta name="twitter:card" content="summary_large_image" />
+
         <meta name="generator" content={Astro.generator} />
-        <title>AdriTech – Électricien Bruxelles</title>
     </head>
     <body>
         <slot />

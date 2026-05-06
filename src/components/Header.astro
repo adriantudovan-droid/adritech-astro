@@ -1,24 +1,48 @@
 ---
-// No JS needed for now — hamburger logic comes later
+// src/components/Header.astro
+//
+// Site header with nav and language switcher. Reads strings from ui.ts so
+// the same component renders in EN/FR/NL depending on the current page.
+import { getLangFromUrl, useTranslations } from '../i18n/utils';
+import { languages } from '../i18n/ui';
+
+const lang = getLangFromUrl(Astro.url);
+const t = useTranslations(lang);
+
+// Build the URL for each language version of the *current* page.
+// English lives at /, French at /fr/, Dutch at /nl/.
+function urlForLang(target: string): string {
+    if (target === 'en') return '/';
+    return `/${target}/`;
+}
 ---
 
 <header class="site-header">
-        <div class="container">
-            <a href="#home" class="logo">AdriTech</a>
-            <nav class="main-nav">
-                <ul>
-                    <li><a href="#services">Services</a></li>
-                    <li><a href="#about">About</a></li>
-                    <li><a href="#gallery">Projects</a></li>
-                    <li><a href="#testimonials">Reviews</a></li>
-                    <li><a href="#contact">Contact</a></li>
-                </ul>
-            </nav>
-           <div class="lang-switcher" aria-label="Language">
-    <a href="#" class="lang-active" aria-current="true">EN</a>
-    <span class="lang-soon" title="Coming soon">FR</span>
-    <span class="lang-soon" title="Coming soon">NL</span>
-</div>
- <button class="nav-toggle" aria-label="Open menu">☰</button>
+    <div class="container">
+        <a href={urlForLang(lang)} class="logo">AdriTech</a>
+        <nav class="main-nav">
+            <ul>
+                <li><a href="#services">{t('nav.services')}</a></li>
+                <li><a href="#about">{t('nav.about')}</a></li>
+                <li><a href="#gallery">{t('nav.gallery')}</a></li>
+                <li><a href="#testimonials">{t('nav.testimonials')}</a></li>
+                <li><a href="#contact">{t('nav.contact')}</a></li>
+            </ul>
+        </nav>
+        <div class="lang-switcher" aria-label={t('nav.language')}>
+            {
+                Object.keys(languages).map((code) => {
+                    const isActive = code === lang;
+                    return isActive ? (
+                        <a href={urlForLang(code)} class="lang-active" aria-current="true">
+                            {code.toUpperCase()}
+                        </a>
+                    ) : (
+                        <a href={urlForLang(code)}>{code.toUpperCase()}</a>
+                    );
+                })
+            }
         </div>
-    </header>
+        <button class="nav-toggle" aria-label={t('nav.openMenu')}>☰</button>
+    </div>
+</header>

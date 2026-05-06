@@ -1,37 +1,103 @@
 ---
+// src/layouts/Layout.astro
+//
+// Top-level page chrome: <html>, <head>, <body>.
+// Reads the current language from the URL and sets the <html lang="..."> attribute,
+// the page title, and meta description accordingly.
 import '../styles/global.css';
+import { getLangFromUrl, useTranslations } from '../i18n/utils';
+
+const lang = getLangFromUrl(Astro.url);
+const t = useTranslations(lang);
+
+// Per-locale page title + description. Centralized here so we don't sprinkle
+// SEO copy across every page file.
+const seo = {
+    en: {
+        title: 'AdriTech — Electrician in Brussels | Smart Home, Planning & AREI Compliance',
+        description:
+            'Licensed residential electrician in Brussels and surroundings. Smart home automation, electrical planning, and AREI/RGIE conformity checks. Clear quotes, compliance-first approach.',
+    },
+    fr: {
+        title: 'AdriTech — Électricien à Bruxelles | Domotique, Plans & Conformité AREI',
+        description:
+            "Électricien résidentiel agréé à Bruxelles et alentours. Domotique, plans électriques et contrôles de conformité AREI/RGIE. Devis clairs, approche axée sur la conformité.",
+    },
+    nl: {
+        title: 'AdriTech — Elektricien in Brussel | Domotica, Plannen & AREI-conformiteit',
+        description:
+            'Erkend residentieel elektricien in Brussel en omgeving. Domotica, elektrische plannen en AREI/RGIE-conformiteitscontroles. Heldere offertes, conformiteit centraal.',
+    },
+}[lang];
+
+// Structured data (JSON-LD) describing AdriTech as a local business.
+// Google reads this to populate Knowledge Panel, local pack, and map results.
+// One per locale so the description matches the page language.
+const jsonLd = {
+    '@context': 'https://schema.org',
+    '@type': 'Electrician',
+    name: 'AdriTech',
+    image: 'https://adritech.be/images/og-image.jpg',
+    url: `https://adritech.be${Astro.url.pathname}`,
+    telephone: '+32471495013',
+    email: 'info@adritech.be',
+    address: {
+        '@type': 'PostalAddress',
+        addressLocality: 'Brussels',
+        addressCountry: 'BE',
+    },
+    areaServed: {
+        '@type': 'City',
+        name: 'Brussels',
+    },
+    description: seo.description,
+    inLanguage: lang,
+    priceRange: '€€',
+    sameAs: [
+        'https://www.facebook.com/AdriTech.be',
+        'https://www.instagram.com/adritech.be',
+    ],
+};
 ---
+
 <!doctype html>
-<html lang="en">
+<html lang={lang}>
     <head>
         <meta charset="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
 
-        <!-- Title & description -->
-        <title>AdriTech – Électricien Bruxelles</title>
-        <meta name="description" content="AdriTech – Électricien indépendant à Bruxelles. Installations, rénovations, dépannages, mises en conformité, domotique. Devis gratuit." />
+        <!-- Title & description (per locale) -->
+        <title>{seo.title}</title>
+        <meta name="description" content={seo.description} />
 
         <!-- Favicons -->
         <link rel="icon" type="image/png" href="/images/favicon.png" />
         <link rel="apple-touch-icon" href="/images/apple-touch-icon.png" />
 
         <!-- Open Graph / social sharing -->
-        <meta property="og:title" content="AdriTech – Électricien Bruxelles" />
-        <meta property="og:description" content="Installations, rénovations, dépannages, mises en conformité, domotique. Devis gratuit." />
+        <meta property="og:title" content={seo.title} />
+        <meta property="og:description" content={seo.description} />
         <meta property="og:image" content="https://adritech.be/images/og-image.jpg" />
-        <meta property="og:url" content="https://adritech.be" />
+        <meta property="og:url" content={`https://adritech.be${Astro.url.pathname}`} />
         <meta property="og:type" content="website" />
 
         <!-- Twitter -->
         <meta name="twitter:card" content="summary_large_image" />
 
+        <!-- hreflang: tells Google there are equivalent pages in other languages -->
+        <link rel="alternate" hreflang="en" href="https://adritech.be/" />
+        <link rel="alternate" hreflang="fr" href="https://adritech.be/fr/" />
+        <link rel="alternate" hreflang="nl" href="https://adritech.be/nl/" />
+        <link rel="alternate" hreflang="x-default" href="https://adritech.be/" />
+<!-- Structured data: tells Google "this is a local Electrician business" -->
+        <script type="application/ld+json" set:html={JSON.stringify(jsonLd)} />
         <meta name="generator" content={Astro.generator} />
     </head>
     <body>
         <slot />
-		<script>
-    import '../scripts/main.js';
-</script>
+        <script>
+            import '../scripts/main.js';
+        </script>
     </body>
 </html>
 

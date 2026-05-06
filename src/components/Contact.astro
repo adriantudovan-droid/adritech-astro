@@ -1,41 +1,57 @@
 ---
-// No JS in frontmatter for now — interactive logic comes later
+// src/components/Contact.astro
+import { getLangFromUrl, useTranslations } from '../i18n/utils';
+
+const lang = getLangFromUrl(Astro.url);
+const t = useTranslations(lang);
 ---
+
 <section id="contact" class="contact">
     <div class="container">
-        <h2>Start Your Project</h2>
-        <p>Tell me about what you need — a new installation, a smart home upgrade, a conformity check, or just a question. I read every message and reply within 24 hours.</p>
+        <h2>{t('contact.heading')}</h2>
+        <p>{t('contact.intro')}</p>
         <form class="contact-form" action="https://formspree.io/f/maqapebk" method="POST">
             <label>
-                Name
-                <input type="text" name="name" required autocomplete="name">
+                {t('contact.form.name')}
+                <input type="text" name="name" required autocomplete="name" />
             </label>
             <label>
-                Email
-                <input type="email" name="email" required autocomplete="email">
+                {t('contact.form.email')}
+                <input type="email" name="email" required autocomplete="email" />
             </label>
             <label>
-                Phone (optional)
-                <input type="tel" name="phone" autocomplete="tel">
+                {t('contact.form.phone')}
+                <input type="tel" name="phone" autocomplete="tel" />
             </label>
             <label>
-                Project type
+                {t('contact.form.projectType')}
                 <select name="project-type" required>
-                    <option value="">Select one…</option>
-                    <option value="residential">Residential wiring / installation</option>
-                    <option value="smart-home">Smart home automation</option>
-                    <option value="planning">Electrical planning &amp; design</option>
-                    <option value="conformity">Conformity check (AREI/RGIE)</option>
-                    <option value="other">Something else</option>
+                    <option value="">{t('contact.form.projectType.placeholder')}</option>
+                    <option value="residential">{t('contact.form.projectType.residential')}</option>
+                    <option value="smart-home">{t('contact.form.projectType.smart')}</option>
+                    <option value="planning">{t('contact.form.projectType.planning')}</option>
+                    <option value="conformity">{t('contact.form.projectType.conformity')}</option>
+                    <option value="other">{t('contact.form.projectType.other')}</option>
                 </select>
             </label>
             <label>
-                How can I help?
+                {t('contact.form.message')}
                 <textarea name="message" rows="5" required></textarea>
             </label>
-            <button type="submit" class="btn btn-primary">Send Message</button>
-       <input type="text" name="_gotcha" class="honeypot" tabindex="-1" autocomplete="off" aria-hidden="true" aria-label="Leave this field empty">
-    </form>
-        <p class="contact-alt">Prefer to call? <a href="tel:+32471495013">+32 471 49 50 13</a> · <a href="mailto:info@adritech.be">info@adritech.be</a></p>
+            <button type="submit" class="btn btn-primary">{t('contact.form.submit')}</button>
+            <input
+                type="text"
+                name="_gotcha"
+                class="honeypot"
+                tabindex="-1"
+                autocomplete="off"
+                aria-hidden="true"
+                aria-label={t('contact.form.honeypot.aria')}
+            />
+        </form>
+        <p class="contact-alt">
+            {t('contact.alt.prefix')} <a href="tel:+32471495013">+32 471 49 50 13</a> ·
+            <a href="mailto:info@adritech.be">info@adritech.be</a>
+        </p>
     </div>
 </section>

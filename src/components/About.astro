@@ -1,10 +1,15 @@
 ---
-// No JS needed
+// src/components/About.astro
+import { getLangFromUrl, useTranslations } from '../i18n/utils';
+
+const lang = getLangFromUrl(Astro.url);
+const t = useTranslations(lang);
 ---
+
 <section id="about" class="about">
-        <div class="container">
-            <h2>About Adrian</h2>
-            <p>I've spent the last decade working on residential electrical installations across Brussels and the surrounding communes — from single-room rewires to full smart home projects. What sets my work apart is the planning side: before a single cable goes in, I make sure your installation is designed to meet AREI/RGIE standards from day one. Fewer surprises. Fewer rework jobs. A clean pass on the conformity check.</p>
-            <p>I work directly with homeowners, architects, and contractors. If you want an electrician who thinks three steps ahead and leaves the paperwork in order, we'll get along well.</p>
-        </div>
-    </section>
+    <div class="container">
+        <h2>{t('about.heading')}</h2>
+        <p>{t('about.p1')}</p>
+        <p>{t('about.p2')}</p>
+    </div>
+</section>

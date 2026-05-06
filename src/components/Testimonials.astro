@@ -1,13 +1,18 @@
 ---
-// No JS needed
+// src/components/Testimonials.astro
+import { getLangFromUrl, useTranslations } from '../i18n/utils';
+
+const lang = getLangFromUrl(Astro.url);
+const t = useTranslations(lang);
 ---
+
 <section id="testimonials" class="testimonials">
     <div class="container">
-        <h2>What Clients Say</h2>
+        <h2>{t('testimonials.heading')}</h2>
         <blockquote>
-            <p>"Adrian took care of our full rewire and the AREI inspection paperwork. Clean work, clear quote, no surprises. I'd hire him again without hesitation."</p>
-            <cite>— Client name, Brussels</cite>
+            <p>"{t('testimonials.quote')}"</p>
+            <cite>{t('testimonials.cite')}</cite>
         </blockquote>
-        <p class="reviews-placeholder">More reviews coming soon.</p>ore reviews coming soon.</p>
+        <p class="reviews-placeholder">{t('testimonials.placeholder')}</p>
     </div>
- </section>
+</section>

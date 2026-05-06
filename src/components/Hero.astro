@@ -1,13 +1,18 @@
 ---
-// No JS needed
+// src/components/Hero.astro
+import { getLangFromUrl, useTranslations } from '../i18n/utils';
+
+const lang = getLangFromUrl(Astro.url);
+const t = useTranslations(lang);
 ---
+
 <section id="home" class="hero">
     <div class="container">
-        <h1>Licensed Electrician in Brussels<br>— specialized in Planning &amp; Compliance</h1>
-        <p class="tagline">Residential wiring, smart home automation, and the paperwork most electricians skip — from AREI/RGIE conformity checks to full electrical plans for your renovation or new build.</p>
+        <h1>{t('hero.title.line1')}<br />{t('hero.title.line2')}</h1>
+        <p class="tagline">{t('hero.tagline')}</p>
         <div class="hero-buttons">
-            <a href="#contact" class="btn btn-primary">Request a Quote</a>
-            <a href="tel:+32471495013" class="btn btn-secondary">Call +32 471 49 50 13</a>
+            <a href="#contact" class="btn btn-primary">{t('hero.cta.quote')}</a>
+            <a href="tel:+32471495013" class="btn btn-secondary">{t('hero.cta.call')}</a>
         </div>
     </div>
 </section>

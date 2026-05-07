@@ -114,6 +114,8 @@ export const ui = {
             '© 2026 AdriTech — Adrian Tudovan · Licensed electrician, Brussels',
         'footer.facebook.aria': 'AdriTech on Facebook',
         'footer.instagram.aria': 'AdriTech on Instagram',
+        'footer.review.text': 'Leave a Google review',
+        'footer.review.aria': 'Leave a Google review for AdriTech',
     },
 
     // ----- French (placeholders — to translate next step) ----
@@ -210,6 +212,8 @@ export const ui = {
             '© 2026 AdriTech — Adrian Tudovan · Électricien agréé, Bruxelles',
         'footer.facebook.aria': 'AdriTech sur Facebook',
         'footer.instagram.aria': 'AdriTech sur Instagram',
+        'footer.review.text': 'Laisser un avis Google',
+        'footer.review.aria': 'Laisser un avis Google pour AdriTech',
     },
 
     // ----- Dutch (placeholders — to translate next step) -----
@@ -306,6 +310,8 @@ export const ui = {
             '© 2026 AdriTech — Adrian Tudovan · Erkend elektricien, Brussel',
         'footer.facebook.aria': 'AdriTech op Facebook',
         'footer.instagram.aria': 'AdriTech op Instagram',
+        'footer.review.text': 'Een Google-review achterlaten',
+        'footer.review.aria': 'Een Google-review voor AdriTech achterlaten',
     },
 } as const;
 

@@ -22,3 +22,6 @@ pnpm-debug.log*
 
 # jetbrains setting folder
 .idea/
+# Cloudflare Workers config exports left by failed deploys
+adritech-astro.*.workers.dev-*.json
+*.workers.dev-*.json

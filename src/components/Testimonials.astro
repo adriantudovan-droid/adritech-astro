@@ -4,15 +4,57 @@ import { getLangFromUrl, useTranslations } from '../i18n/utils';
 
 const lang = getLangFromUrl(Astro.url);
 const t = useTranslations(lang);
+
+// Leaves a review directly; PROFILE_URL opens the public profile with all reviews.
+const REVIEW_URL = 'https://g.page/r/CSG0_YEbDhIZEBM/review';
+const PROFILE_URL = 'https://g.page/r/CSG0_YEbDhIZEBM';
+
+const reviews = [
+    { quote: t('testimonials.quote1'), cite: t('testimonials.cite1') },
+    { quote: t('testimonials.quote2'), cite: t('testimonials.cite2') },
+];
 ---
 
 <section id="testimonials" class="testimonials">
     <div class="container">
         <h2>{t('testimonials.heading')}</h2>
-        <blockquote>
-            <p>"{t('testimonials.quote')}"</p>
-            <cite>{t('testimonials.cite')}</cite>
-        </blockquote>
-        <p class="reviews-placeholder">{t('testimonials.placeholder')}</p>
+
+        <p class="testimonials-rating">
+            <span class="testimonials-stars" aria-hidden="true">★★★★★</span>
+            <span>{t('testimonials.rating')}</span>
+        </p>
+
+        <div class="testimonials-grid">
+            {reviews.map((r) => (
+                <blockquote>
+                    <p>{r.quote}</p>
+                    <cite>{r.cite}</cite>
+                </blockquote>
+            ))}
+        </div>
+
+        <p class="testimonials-all">
+            <a href={PROFILE_URL} target="_blank" rel="noopener noreferrer">{t('testimonials.all')}</a>
+        </p>
+
+        <div class="review-invite">
+            <div class="review-invite-body">
+                <h3>{t('testimonials.cta.heading')}</h3>
+                <p>{t('testimonials.cta.text')}</p>
+                <a
+                    class="btn btn-primary"
+                    href={REVIEW_URL}
+                    target="_blank"
+                    rel="noopener noreferrer">{t('testimonials.cta.button')}</a>
+            </div>
+            <img
+                class="review-invite-qr"
+                src="/images/reviewQRcode.png"
+                alt={t('testimonials.cta.qr')}
+                width="132"
+                height="132"
+                loading="lazy"
+            />
+        </div>
     </div>
 </section>

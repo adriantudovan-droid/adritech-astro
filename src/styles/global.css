@@ -301,11 +301,108 @@ section h2 {
     font-style: normal;
     font-weight: 600;
 }
-.reviews-placeholder {
-    text-align: center;
-    margin-top: var(--space-md);
-    font-style: italic;
+.testimonials-rating {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: var(--space-sm);
+    margin-bottom: var(--space-lg);
+    font-weight: 600;
     color: var(--color-gray);
+}
+
+.testimonials-stars {
+    color: var(--color-primary);
+    letter-spacing: 2px;
+}
+
+.testimonials-grid {
+    display: grid;
+    gap: var(--space-md);
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+@media (min-width: 760px) {
+    .testimonials-grid {
+        grid-template-columns: 1fr 1fr;
+        align-items: start;
+    }
+}
+
+.testimonials-grid blockquote {
+    max-width: none;
+    margin: 0;
+    text-align: left;
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-md);
+    height: 100%;
+}
+
+.testimonials-grid blockquote p {
+    font-size: 17px;
+    margin-bottom: 0;
+}
+
+.testimonials-all {
+    margin-top: var(--space-md);
+}
+
+.testimonials-all a {
+    color: var(--color-primary-dark);
+    font-weight: 600;
+    text-decoration: none;
+}
+
+.testimonials-all a:hover,
+.testimonials-all a:focus-visible {
+    text-decoration: underline;
+}
+
+/* Review invitation */
+.review-invite {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    gap: var(--space-lg);
+    max-width: 900px;
+    margin: var(--space-xl) auto 0;
+    padding: var(--space-lg);
+    background: var(--color-white);
+    border: 1px solid var(--color-border);
+    border-radius: var(--radius);
+    box-shadow: var(--shadow-sm);
+    text-align: left;
+}
+
+.review-invite-body {
+    flex: 1 1 300px;
+}
+
+.review-invite-body h3 {
+    margin-bottom: var(--space-sm);
+}
+
+.review-invite-body p {
+    color: var(--color-gray);
+    margin-bottom: var(--space-md);
+}
+
+.review-invite-qr {
+    flex: 0 0 auto;
+    display: block;
+    border-radius: var(--radius);
+}
+
+@media (max-width: 600px) {
+    .review-invite {
+        text-align: center;
+    }
+    .review-invite-body {
+        flex-basis: 100%;
+    }
 }
 
 

@@ -85,11 +85,19 @@ export const ui = {
 
         // ----- Testimonials -----
         'testimonials.heading': 'What Clients Say',
-        'testimonials.quote':
-            "Adrian took care of our full rewire and the AREI inspection paperwork. Clean work, clear quote, no surprises. I'd hire him again without hesitation.",
-        'testimonials.cite': '— Client name, Brussels',
-        'testimonials.placeholder': 'More reviews coming soon.',
-
+        'testimonials.rating': '5.0 on Google · 5 reviews',
+        'testimonials.quote1':
+            'Adrian est réactif, disponible, professionnel et et donne de très bon conseils. Je recommande vivement ses services !',
+        'testimonials.cite1': '— Diane C., avis Google',
+        'testimonials.quote2':
+            'Great experience, work done swiftly and professionally. Recommended!',
+        'testimonials.cite2': '— S. S., Local Guide, Google review',
+        'testimonials.all': 'See all reviews on Google →',
+        'testimonials.cta.heading': 'Worked with AdriTech?',
+        'testimonials.cta.text':
+            'Your review helps the next homeowner decide. It takes a minute.',
+        'testimonials.cta.button': 'Leave a Google review',
+        'testimonials.cta.qr': 'QR code to leave a Google review for AdriTech',
         // ----- Contact -----
         'contact.heading': 'Start Your Project',
         'contact.intro':
@@ -183,11 +191,19 @@ export const ui = {
 
         // ----- Testimonials -----
         'testimonials.heading': 'Ce que disent mes clients',
-        'testimonials.quote':
-            "Adrian a pris en charge le recâblage complet et toute la partie administrative du contrôle AREI. Travail soigné, devis clair, aucune surprise. Je le rappellerai sans hésiter.",
-        'testimonials.cite': '— Nom du client, Bruxelles',
-        'testimonials.placeholder': 'D\'autres avis bientôt en ligne.',
-
+        'testimonials.rating': '5,0 sur Google · 5 avis',
+        'testimonials.quote1':
+            'Adrian est réactif, disponible, professionnel et et donne de très bon conseils. Je recommande vivement ses services !',
+        'testimonials.cite1': '— Diane C., avis Google',
+        'testimonials.quote2':
+            'Great experience, work done swiftly and professionally. Recommended!',
+        'testimonials.cite2': '— S. S., Local Guide, avis Google',
+        'testimonials.all': 'Voir tous les avis sur Google →',
+        'testimonials.cta.heading': 'Vous avez fait appel à AdriTech ?',
+        'testimonials.cta.text':
+            'Votre avis aide le prochain propriétaire à choisir. Cela prend une minute.',
+        'testimonials.cta.button': 'Laisser un avis Google',
+        'testimonials.cta.qr': 'Code QR pour laisser un avis Google sur AdriTech',
         // ----- Contact -----
         'contact.heading': 'Démarrons votre projet',
         'contact.intro':
@@ -281,11 +297,19 @@ export const ui = {
 
         // ----- Testimonials -----
         'testimonials.heading': 'Wat klanten zeggen',
-        'testimonials.quote':
-            'Adrian heeft onze volledige herbekabeling én de AREI-keuring administratief in orde gebracht. Net werk, duidelijke offerte, geen verrassingen. Ik bel hem zonder twijfel opnieuw.',
-        'testimonials.cite': '— Naam klant, Brussel',
-        'testimonials.placeholder': 'Meer reviews binnenkort online.',
-
+        'testimonials.rating': '5,0 op Google · 5 reviews',
+        'testimonials.quote1':
+            'Adrian est réactif, disponible, professionnel et et donne de très bon conseils. Je recommande vivement ses services !',
+        'testimonials.cite1': '— Diane C., avis Google',
+        'testimonials.quote2':
+            'Great experience, work done swiftly and professionally. Recommended!',
+        'testimonials.cite2': '— S. S., Local Guide, Google-review',
+        'testimonials.all': 'Bekijk alle reviews op Google →',
+        'testimonials.cta.heading': 'Werkte u met AdriTech?',
+        'testimonials.cta.text':
+            'Uw review helpt de volgende eigenaar kiezen. Het duurt één minuut.',
+        'testimonials.cta.button': 'Een Google-review achterlaten',
+        'testimonials.cta.qr': 'QR-code om een Google-review voor AdriTech achter te laten',
         // ----- Contact -----
         'contact.heading': 'Start uw project',
         'contact.intro':

@@ -16,10 +16,10 @@ import { ui, defaultLang, type UIKey } from './ui';
 
 /**
  * Look at the current URL and figure out which language we're rendering.
- *   /            -> 'en'
- *   /fr/...      -> 'fr'
+ *   /            -> 'fr'
+ *   /en/...      -> 'en'
  *   /nl/...      -> 'nl'
- *   anything else -> defaultLang ('en')
+ *   anything else -> defaultLang ('fr')
  */
 export function getLangFromUrl(url: URL): keyof typeof ui {
     const [, segment] = url.pathname.split('/');

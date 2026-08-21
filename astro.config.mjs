@@ -12,19 +12,19 @@ export default defineConfig({
   // Internationalization (i18n) settings.
   // Tells Astro the site exists in three languages and how to route between them.
   i18n: {
-      // The default locale. English lives at the site root (no /en/ prefix).
-      defaultLocale: 'en',
+      // The default locale. French lives at the site root (no /fr/ prefix).
+      defaultLocale: 'fr',
 
       // Every locale supported by the site. Each one gets its own URL prefix
       // (except the default, see prefixDefaultLocale below):
-      //   en -> /         (default, no prefix)
-      //   fr -> /fr/      (French)
+      //   fr -> /         (default, no prefix)
+      //   en -> /en/      (English)
       //   nl -> /nl/      (Dutch / Flemish)
-      locales: ['en', 'fr', 'nl'],
+      locales: ['fr', 'en', 'nl'],
 
       // How URLs are shaped:
-      //   prefixDefaultLocale: false  =>  English at /, French at /fr/, Dutch at /nl/
-      //   redirectToDefaultLocale: true  =>  unknown paths fall back to English
+      //   prefixDefaultLocale: false  =>  French at /, English at /en/, Dutch at /nl/
+      //   redirectToDefaultLocale: true  =>  unknown paths fall back to French
       routing: {
           prefixDefaultLocale: false,
       },

@@ -10,9 +10,9 @@ const lang = getLangFromUrl(Astro.url);
 const t = useTranslations(lang);
 
 // Build the URL for each language version of the *current* page.
-// English lives at /, French at /fr/, Dutch at /nl/.
+// French lives at /, English at /en/, Dutch at /nl/.
 function urlForLang(target: string): string {
-    if (target === 'en') return '/';
+    if (target === 'fr') return '/';
     return `/${target}/`;
 }
 ---

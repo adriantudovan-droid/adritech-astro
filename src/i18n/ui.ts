@@ -19,7 +19,7 @@ export const languages = {
     nl: 'Nederlands',
 } as const;
 
-export const defaultLang = 'en';
+export const defaultLang = 'fr';
 
 export const ui = {
     en: {

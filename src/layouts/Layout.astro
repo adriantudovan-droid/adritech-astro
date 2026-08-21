@@ -70,6 +70,9 @@ const jsonLd = {
         <title>{seo.title}</title>
         <meta name="description" content={seo.description} />
 
+        <!-- Canonical URL for this page -->
+        <link rel="canonical" href={`https://adritech.be${Astro.url.pathname}`} />
+
         <!-- Favicons -->
         <link rel="icon" type="image/png" href="/images/favicon.png" />
         <link rel="apple-touch-icon" href="/images/apple-touch-icon.png" />
@@ -85,8 +88,8 @@ const jsonLd = {
         <meta name="twitter:card" content="summary_large_image" />
 
         <!-- hreflang: tells Google there are equivalent pages in other languages -->
-        <link rel="alternate" hreflang="en" href="https://adritech.be/" />
-        <link rel="alternate" hreflang="fr" href="https://adritech.be/fr/" />
+        <link rel="alternate" hreflang="fr" href="https://adritech.be/" />
+        <link rel="alternate" hreflang="en" href="https://adritech.be/en/" />
         <link rel="alternate" hreflang="nl" href="https://adritech.be/nl/" />
         <link rel="alternate" hreflang="x-default" href="https://adritech.be/" />
 <!-- Structured data: tells Google "this is a local Electrician business" -->

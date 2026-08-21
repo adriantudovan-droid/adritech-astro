@@ -33,8 +33,8 @@ export const ui = {
         'nav.language': 'Language',
 
         // ----- Hero -----
-        'hero.title.line1': 'Licensed Electrician in Brussels',
-        'hero.title.line2': '— specialized in Planning & Compliance',
+        'hero.title.line1': 'Independent Electrician in Brussels',
+        'hero.title.line2': '— RGIE compliance, handled end to end',
         'hero.tagline':
             'Residential wiring, smart home automation, and the paperwork most electricians skip — from AREI/RGIE conformity checks to full electrical plans for your renovation or new build.',
         'hero.cta.quote': 'Request a Quote',
@@ -51,9 +51,9 @@ export const ui = {
         'services.planning.title': 'Electrical Planning & Design',
         'services.planning.body':
             'Full electrical plans for renovations and new builds, drawn to Belgian standards. I handle the technical details so your architect, contractor, and inspector stay aligned.',
-        'services.conformity.title': 'Conformity Checks (AREI / RGIE)',
+        'services.conformity.title': 'RGIE / AREI Compliance',
         'services.conformity.body':
-            "Pre-sale inspections and periodic compliance checks. I'll tell you exactly what needs fixing, handle what I can, and help you pass the official inspection without surprises.",
+            "Preparation and follow-up for pre-sale and periodic inspections. I survey the defects, draw the single-line diagram, carry out the work and arrange the accredited body's visit. One contact, from report to certificate.",
 
         // ----- About -----
         'about.heading': 'About Adrian',
@@ -119,7 +119,7 @@ export const ui = {
 
         // ----- Footer -----
         'footer.copyright':
-            '© 2026 AdriTech — Adrian Tudovan · Licensed electrician, Brussels',
+            '© 2026 AdriTech — Adrian Tudovan · Independent electrician, Brussels',
         'footer.facebook.aria': 'AdriTech on Facebook',
         'footer.instagram.aria': 'AdriTech on Instagram',
         'footer.review.text': 'Leave a Google review',
@@ -139,8 +139,8 @@ export const ui = {
         'nav.language': 'Langue',
 
         // ----- Hero -----
-        'hero.title.line1': 'Électricien agréé à Bruxelles',
-        'hero.title.line2': '— spécialiste en plans & conformité',
+        'hero.title.line1': 'Électricien indépendant à Bruxelles',
+        'hero.title.line2': '— mise en conformité RGIE de A à Z',
         'hero.tagline':
             "Installations résidentielles, domotique et toute la partie administrative que la plupart des électriciens laissent de côté — du contrôle de conformité AREI/RGIE au plan électrique complet pour votre rénovation ou nouvelle construction.",
         'hero.cta.quote': 'Demander un devis',
@@ -159,7 +159,7 @@ export const ui = {
             "Plans électriques complets pour rénovations et nouvelles constructions, conformes aux normes belges. Je gère les détails techniques pour que votre architecte, votre entrepreneur et l'organisme de contrôle restent alignés.",
         'services.conformity.title': 'Mise en conformité (AREI / RGIE)',
         'services.conformity.body':
-            "Contrôles avant vente et contrôles périodiques. Je vous dis exactement ce qui doit être corrigé, je m'occupe de ce que je peux, et je vous aide à passer le contrôle officiel sans mauvaise surprise.",
+            "Préparation et suivi du contrôle avant vente ou périodique. Je relève les non-conformités, j'établis le schéma unifilaire, j'exécute les travaux et j'organise le passage de l'organisme agréé. Un seul interlocuteur, du rapport au certificat.",
 
         // ----- About -----
         'about.heading': 'À propos d’Adrian',
@@ -225,7 +225,7 @@ export const ui = {
 
         // ----- Footer -----
         'footer.copyright':
-            '© 2026 AdriTech — Adrian Tudovan · Électricien agréé, Bruxelles',
+            '© 2026 AdriTech — Adrian Tudovan · Électricien indépendant, Bruxelles',
         'footer.facebook.aria': 'AdriTech sur Facebook',
         'footer.instagram.aria': 'AdriTech sur Instagram',
         'footer.review.text': 'Laisser un avis Google',
@@ -245,8 +245,8 @@ export const ui = {
         'nav.language': 'Taal',
 
         // ----- Hero -----
-        'hero.title.line1': 'Erkende elektricien in Brussel',
-        'hero.title.line2': '— gespecialiseerd in plannen & conformiteit',
+        'hero.title.line1': 'Zelfstandig elektricien in Brussel',
+        'hero.title.line2': '— AREI-conformiteit van A tot Z',
         'hero.tagline':
             'Residentiële bekabeling, domotica en het administratieve werk dat de meeste elektriciens overslaan — van AREI/RGIE-keuringen tot volledige elektrische plannen voor uw renovatie of nieuwbouw.',
         'hero.cta.quote': 'Offerte aanvragen',
@@ -256,16 +256,16 @@ export const ui = {
         'services.heading': 'Wat ik doe',
         'services.residential.title': 'Residentieel elektriciteitswerk',
         'services.residential.body':
-            'Bekabeling, herstellingen, vernieuwing van het elektrisch bord, stopcontacten en verlichting. Net werk, properly afgewerkt, helder uitgelegd.',
+            'Bekabeling, herstellingen, vernieuwing van het elektrisch bord, stopcontacten en verlichting. Net werk, netjes afgewerkt, helder uitgelegd.',
         'services.smart.title': 'Domotica',
         'services.smart.body':
             'Slimme verlichting, verwarmingssturing, geconnecteerde beveiliging en integratie met spraakassistenten. Ontworpen rond hoe u écht woont — niet rond een catalogus.',
         'services.planning.title': 'Elektrische plannen & studies',
         'services.planning.body':
             'Volledige elektrische plannen voor renovaties en nieuwbouw, conform de Belgische normen. Ik regel de technische details zodat uw architect, aannemer en keuringsorganisme op één lijn blijven.',
-        'services.conformity.title': 'Conformiteitscontrole (AREI / RGIE)',
+        'services.conformity.title': 'AREI / RGIE-conformiteit',
         'services.conformity.body':
-            'Keuringen vóór verkoop en periodieke controles. Ik vertel u precies wat er moet worden aangepast, los op wat ik kan, en help u de officiële keuring zonder verrassingen door te komen.',
+            'Voorbereiding en opvolging van de keuring vóór verkoop of de periodieke controle. Ik breng de inbreuken in kaart, maak het eendraadschema, voer de werken uit en regel het bezoek van het erkende keuringsorganisme. Eén aanspreekpunt, van verslag tot attest.',
 
         // ----- About -----
         'about.heading': 'Over Adrian',
@@ -331,7 +331,7 @@ export const ui = {
 
         // ----- Footer -----
         'footer.copyright':
-            '© 2026 AdriTech — Adrian Tudovan · Erkend elektricien, Brussel',
+            '© 2026 AdriTech — Adrian Tudovan · Zelfstandig elektricien, Brussel',
         'footer.facebook.aria': 'AdriTech op Facebook',
         'footer.instagram.aria': 'AdriTech op Instagram',
         'footer.review.text': 'Een Google-review achterlaten',
